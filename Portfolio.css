@@ -1,1 +1,37 @@
+body{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    z-index: -1;
 
+    width: 100wh;
+    height: 100vh;
+}
+
+.defilement_droite{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+    
+    align-items: center;
+    justify-content: center;
+  
+    height: 100px;
+    width: 150px;
+
+ background-color: black;
+}
+
+.Defilement_mid{
+      display: flex;
+      background-color: black;
+
+      width: 100px;
+      width: 200px;
+}
+
+.avatar{
+    border-radius: 2000px;
+
+}
