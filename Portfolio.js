@@ -50,4 +50,3 @@ socket.addEventListener('message', (event) => {
 
 socket.addEventListener('close', () => console.log("WebSocket fermé"));
 socket.addEventListener('error', (err) => console.error("Erreur WebSocket :", err));
-
