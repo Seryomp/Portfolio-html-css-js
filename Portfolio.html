@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="Portfolio.css">
+    <title>Portfolio</title> <!-- <title> sert a changer le titre de l'onglet -->
+    <link rel="stylesheet" href="Portfolio.css"> <!-- link qui sert à permmetre a l'html de se servir du fichier css -->
 </head>
-<div class="flex">
+<div class="flex"> <!-- On crée une div qui va englober tout le body en flex box avec la class "flex" -->
 <body>
-       <div class="defilement_gauche">
-            <div class="profil">
-                <a href="https://discord.gg/e3MhVQ8sgA" target="_blank">
-                    <img class="avatar" src="" alt="avatar"/>
-                </a>
+       <div class="defilement_gauche"> <!-- on crée une div pour la partie gauche avec une class -->
+            <div class="profil"><!--on crée un div dans la div "defilement gauche" avec la class profil -->
+                <a href="https://discord.gg/e3MhVQ8sgA" target="_blank"> <!-- on utilise la balis <a> pour y mettre un lien cliquable sur l'image et le target=_blank pour envoyer sur un autre onglet au lieu de changer celui actuel -->
+                    <img class="avatar" src="" alt="avatar"/><!-- <img> sert a importer une image via un lien ou depuis les fichier via "src" la class avatar est la pour que se soit plus simple plus tard -->
+                </a><!-- fin d ela balise <a> pour que le lien soit dans l'image -->
             </div>
-          <div class="border"></div>
+          <div class="border"></div><!-- creation d'une <div> pour faire la bordure entre chaque elements avec la class border -->
             <div class="categorie">
-                <li>Présentation</li>
+                <li>Présentation</li><!--<li>sert a lister des element -->
                 <li>Diplôme</li>
                 <li>experience</li>
                 <li>connaissance</li>
@@ -24,20 +24,20 @@
                 <li>avantages</li>
             </div>
             <div class="border"></div>
-                <iframe width="100%" height="20%" src="https://www.youtube.com/embed/SmeXtRpWRjk" frameborder="0" allowfullscreen></iframe>
-        </div>
-    <div class="defilement_mid">
-        <button class="top_button">animation</button>
-            <P class="titre">Portfolio</P>
+                <iframe width="100%" height="20%" src="https://www.youtube.com/embed/SmeXtRpWRjk" frameborder="0" allowfullscreen></iframe><!-- <iframe> sert a pouvoir mettre une video d'une page externe par exemple ici youtube et on a ajouter une class pour pouvoir la mettre dans la div de gauche-->
+        </div><!-- fin de la div pour la gauche de la page et tout se qui ce trouve entre le debut et la fin sera sur la gauche de la page grace a la div -->
+    <div class="defilement_mid"><!-- debut de la div pour le milieu -->
+        <button class="top_button">animation</button> <!-- la balise <button> sert a ajouter un boutton clickable sur la page en blanc -->
+            <P class="titre">Portfolio</P> <!-- <P> pour ajouter du texte et on ajoute la class titre pour pouvoir agrandir dans le css -->
             <p class="middle_scroll">bienvenue sur le portfolio de son altesse sorenys</p>
             <img src="" alt="">
-    </div>
-        <div class="defilement_droite">
+    </div><!-- fin de la div pour le milieu-->
+        <div class="defilement_droite"><!-- début de la <div> de droite -->
             <p class="Titre">Guess Character</p>
             <p class="Paragraphe_1_Droite">guss the character between [],[] and []</p>
             
-        </div>
-    <script src="portfolio.js"></script>
+        </div><!-- fin de la div-->
+    <script src="portfolio.js"></script><!-- <script> permet d'ajouter un fichier .js pour que le html l'utilise -->
     <script src="portfolio(part2).js"></script>
 </body>
 </div>
