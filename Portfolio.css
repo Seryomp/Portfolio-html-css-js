@@ -126,3 +126,17 @@ background: linear-gradient(213deg, rgba(13, 3, 3, 1) 0%, rgba(158, 27, 27, 1) 1
     font-style: oblique;/*on met le texte en style oblique*/
     text-align: start;/*on fait en sorte que le texte commence au debut et non au milieu*/
 }
+
+.gif_1{
+    height: auto;
+    width: 50%;
+    border-radius: 50%;
+}
+
+.box_1A1{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+}
