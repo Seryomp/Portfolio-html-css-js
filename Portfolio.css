@@ -140,3 +140,8 @@ background: linear-gradient(213deg, rgba(13, 3, 3, 1) 0%, rgba(158, 27, 27, 1) 1
     align-items: center;
     justify-content: space-between;
 }
+
+.background_music{
+    z-index: -1;
+    position: absolute;
+}
