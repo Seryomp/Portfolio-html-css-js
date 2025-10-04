@@ -6,8 +6,8 @@
     <title>Portfolio</title> <!-- <title> sert a changer le titre de l'onglet -->
     <link rel="stylesheet" href="Portfolio.css"> <!-- link qui sert à permmetre a l'html de se servir du fichier css -->
 </head>
-<div class="flex"> <!-- On crée une div qui va englober tout le body en flex box avec la class "flex" -->
 <body>
+    <div class="flex"> <!-- On crée une div qui va englober tout le body en flex box avec la class "flex" -->
        <div class="defilement_gauche"> <!-- on crée une div pour la partie gauche avec une class -->
             <div class="profil"><!--on crée un div dans la div "defilement gauche" avec la class profil -->
                 <a href="https://discord.gg/e3MhVQ8sgA" target="_blank"> <!-- on utilise la balis <a> pour y mettre un lien cliquable sur l'image et le target=_blank pour envoyer sur un autre onglet au lieu de changer celui actuel -->
@@ -24,7 +24,9 @@
                 <li>avantages</li>
             </div>
             <div class="border"></div>
-                <iframe width="100%" height="20%" src="https://www.youtube.com/embed/SmeXtRpWRjk" frameborder="0" allowfullscreen></iframe><!-- <iframe> sert a pouvoir mettre une video d'une page externe par exemple ici youtube et on a ajouter une class pour pouvoir la mettre dans la div de gauche-->
+                <iframe class="vid1" width="100%" height="20%" src="https://www.youtube.com/embed/G3r-nC-F6es" title="Yuki Tsukumo &amp; Choso vs. Kenjaku | JJK 205-208 | Manga &quot;Animation&quot; [4K]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+                </iframe><!-- <iframe> sert a pouvoir mettre une video d'une page externe par exemple ici youtube et on a ajouter une class pour pouvoir la mettre dans la div de gauche-->
         </div><!-- fin de la div pour la gauche de la page et tout se qui ce trouve entre le debut et la fin sera sur la gauche de la page grace a la div -->
     <div class="defilement_mid"><!-- debut de la div pour le milieu -->
         <button class="top_button">animation</button> <!-- la balise <button> sert a ajouter un boutton clickable sur la page en blanc -->
@@ -39,26 +41,20 @@
     </div><!-- fin de la div pour le milieu-->
         <div class="defilement_droite"><!-- début de la <div> de droite -->
             <div class="box_1A1">
-            <img class="gif_1" src="https://cdn.discordapp.com/attachments/1373446626840023082/1423391627917135953/everknight-evernight.gif?ex=68e02441&is=68ded2c1&hm=e96e7db5690736808b60cc8bda208b2fdc5cb44e33422abaa8f0ae67a6021a08&" alt="">
+            <img class="gif_1" src="https://media.tenor.com/hxUgdNV5Z40AAAAi/evernightdanse-evernight.gif" alt="">
 
             </div>
             <div class="border"></div>
-            <div>
-                <iframe 
-                width="100%"
-                 height="100%" 
-                 src="https://discord.com/widget?id=1404411213521227776&theme=dark" 
-                 frameborder="0"></iframe>
-            </div>
+                <div>
+                    <iframe 
+                    width="100%"
+                     src="https://discord.com/widget?id=1404411213521227776&theme=dark" 
+                     frameborder="0"></iframe>
+                </div>
         </div><!-- fin de la div-->
-        <iframe class="backgrpund_musique"
-            src="https://www.youtube.com/embed/m_X-mXvaazk?autoplay=1&loop=1&playlist=m_X-mXvaazk"
-            width="0"
-            height="0"
-            allow="autoplay">
-        </iframe>
+    </div>
     <script src="portfolio.js"></script><!-- <script> permet d'ajouter un fichier .js pour que le html l'utilise -->
     <script src="portfolio(part2).js"></script>
+    <script src="colors_change.js"></script>
 </body>
-</div>
 </html>

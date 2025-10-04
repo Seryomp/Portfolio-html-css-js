@@ -1,3 +1,4 @@
 # Fichier de variables sensibles
 .env
 account.db
+bot1.py
