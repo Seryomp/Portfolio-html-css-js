@@ -101,7 +101,9 @@ body{
     flex-grow: 1;
 
     width: 15%;/*le defilement droite fait 15% de la div "flex" (la premiere)*/
-    height: 100%;/*on prend toutes la hauteur*/
+    height: 100%;/*on prend 100% hauteur*/
+
+    scrollbar-width: 30%;
 
     color: aliceblue;/*on met la couleur en blanc*/
 
@@ -146,4 +148,80 @@ background: linear-gradient(213deg, rgba(13, 3, 3, 1) 0%, rgba(158, 27, 27, 1) 1
 .background_music{
     z-index: -1;
     position: absolute;
+
+}
+
+.connection {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);/* on deplace au milieu*/
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUtLARa5jdSQ5sEORvxnezWT-ixpVvfiPXg8SgVRuUZpU8FVYCDpIjs3XfdEu2MpQw5os&usqp=CAU);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3); /*on assombri le reste de la page*/
+  z-index: 1001;/*toujours au premier plans*/
+  display: none;
+  width: 320px;
+}
+
+.connection-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+  display: none;/* on met display none por que se soit invisible*/
+}
+
+/* boutons haut (connexion / inscription) */
+.form-switch {
+  display: flex;
+  justify-content: center;
+  gap: 10px;/* gap sert a l'espace entre les "objet"*/
+  margin-bottom: 15px;/*la marge du dessus*/
+}
+
+.switch-btn {
+  background: #eee;
+  border: none;/*aucune bordure*/
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;/* on affiche une petit icone visuelle quand la souris est dessus*/
+}
+
+.switch-btn.active {
+  background: #4b8bfd;
+  color: white;
+}
+
+.form {
+  display: none;
+}
+
+.form.active {
+  display: block;/* on aligne en colone avec display block*/
+}
+
+/* bouton fermer */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;/*position*/
+  font-size: 22px;
+  font-weight: bold;/* ecriture en gras*/
+  cursor: pointer;
+  color: #333;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+#login-form,#register-form{
+    color: rgb(0, 247, 255);
 }

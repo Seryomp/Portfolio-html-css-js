@@ -29,7 +29,6 @@
                 </iframe><!-- <iframe> sert a pouvoir mettre une video d'une page externe par exemple ici youtube et on a ajouter une class pour pouvoir la mettre dans la div de gauche-->
         </div><!-- fin de la div pour la gauche de la page et tout se qui ce trouve entre le debut et la fin sera sur la gauche de la page grace a la div -->
     <div class="defilement_mid"><!-- debut de la div pour le milieu -->
-        <button class="top_button">animation</button> <!-- la balise <button> sert a ajouter un boutton clickable sur la page en blanc -->
             <P class="titre">Portfolio</P> <!-- <P> pour ajouter du texte et on ajoute la class titre pour pouvoir agrandir dans le css -->
             <p class="middle_scroll">bienvenue sur le portfolio de son altesse sorenys</p>
             <p>titulaire du BAC SN</p>
@@ -42,7 +41,7 @@
         <div class="defilement_droite"><!-- début de la <div> de droite -->
             <div class="box_1A1">
             <img class="gif_1" src="https://media.tenor.com/hxUgdNV5Z40AAAAi/evernightdanse-evernight.gif" alt="">
-
+            <input class="co" type="button" value="connection" />
             </div>
             <div class="border"></div>
                 <div>
@@ -53,6 +52,50 @@
                 </div>
         </div><!-- fin de la div-->
     </div>
+  <iframe id="youtube-player"
+  src="https://www.youtube.com/embed/mo3veAOyHcw"
+  frameborder="0"
+  style="position:absolute; width:0; height:0; z-index:-1;"
+  allow="autoplay">
+</iframe>
+<div class="connection-overlay"></div>
+
+<div class="connection">
+  <span class="close-btn">&times;</span><!---bouton pour fermer la page.--->
+
+  <div class="form-switch">
+    <button class="switch-btn active" id="login-tab">Compte existant</button>
+    <button class="switch-btn" id="register-tab">Nouveau compte</button>
+  </div>
+
+  <!-- Formulaire connexion -->
+  <form id="login-form" class="form active" action="verification.php" method="post"><!-- partie pour se connecter et envoie une requete au php -->
+    <h1>Connexion</h1>
+    <label>Nom d'utilisateur</label>
+    <input type="text" name="username" placeholder="username" required>
+    <br>
+    <label>Mot de passe</label>
+    <input type="password" name="password" placeholder="password" required>
+    <br>
+    <input type="submit" value="Se connecter">
+  </form>
+
+  <!-- Formulaire inscription -->
+  <form id="register-form" class="form" action="inscription.php" method="post">
+    <h1>Nouveau compte</h1>
+    <label>Nom d'utilisateur</label>
+    <input type="text" name="new_username" placeholder="username" required><!-- entrer du texte pour un pseudo avec place holder qui affiche un exemple -->
+    <br>
+    <label>Email</label>
+    <input type="email" name="new_email" placeholder="mail@example.com" required>
+    <br>
+    <label>Mot de passe</label>
+    <input type="password" name="new_password" placeholder="password" required>
+    <br>
+    <input type="submit" value="Créer le compte">
+  </form>
+</div>
+    <script src="form.js"></script>
     <script src="portfolio.js"></script><!-- <script> permet d'ajouter un fichier .js pour que le html l'utilise -->
     <script src="portfolio(part2).js"></script>
     <script src="colors_change.js"></script>
