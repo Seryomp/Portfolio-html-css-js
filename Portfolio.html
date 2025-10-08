@@ -38,19 +38,35 @@
             <p>mes point faible:</p>
             <p>mes avantages: </p>
     </div><!-- fin de la div pour le milieu-->
-        <div class="defilement_droite"><!-- début de la <div> de droite -->
-            <div class="box_1A1">
-            <img class="gif_1" src="https://media.tenor.com/hxUgdNV5Z40AAAAi/evernightdanse-evernight.gif" alt="">
-            <input class="co" type="button" value="connection" />
-            </div>
-            <div class="border"></div>
+            <div class="defilement_droite"><!-- début de la droite -->
+                <div class="box_1A1">
+                    <img class="gif_1" src="https://media.tenor.com/hxUgdNV5Z40AAAAi/evernightdanse-evernight.gif" alt="">
+
+                    <!-- Profil utilisateur -->
+                    <div id="profile-container">
+                        <img id="profile-avatar" src="avatars/default_avatar.png" alt="Avatar" class="avatar-circle">
+                        <div>
+                            <span id="profile-username">Pseudo</span>
+                            <button id="edit-username">Modifier pseudo</button>
+                            <button id="edit-avatar">Modifier avatar</button>
+                        </div>
+                    </div>
+
+                    <!-- Bouton connexion (sera masqué après connexion) -->
+                    <button class="co">Connexion</button>
+                </div>
+
+                <div class="border"></div>
+
+                <!-- Widget Discord -->
                 <div>
                     <iframe 
-                    width="100%"
-                     src="https://discord.com/widget?id=1404411213521227776&theme=dark" 
-                     frameborder="0"></iframe>
+                        width="100%" 
+                        src="https://discord.com/widget?id=1404411213521227776&theme=dark" 
+                        frameborder="0">
+                    </iframe>
                 </div>
-        </div><!-- fin de la div-->
+              </div>
     </div>
   <iframe id="youtube-player"
   src="https://www.youtube.com/embed/mo3veAOyHcw"
@@ -58,44 +74,57 @@
   style="position:absolute; width:0; height:0; z-index:-1;"
   allow="autoplay">
 </iframe>
+
+<!-- Popup Connexion / Inscription / Mot de passe oublié -->
 <div class="connection-overlay"></div>
 
 <div class="connection">
-  <span class="close-btn">&times;</span><!---bouton pour fermer la page.--->
+    <span class="close-btn">&times;</span>
 
-  <div class="form-switch">
-    <button class="switch-btn active" id="login-tab">Compte existant</button>
-    <button class="switch-btn" id="register-tab">Nouveau compte</button>
-  </div>
+    <div class="form-switch">
+        <button class="switch-btn active" id="login-tab">Compte existant</button>
+        <button class="switch-btn" id="register-tab">Nouveau compte</button>
+        <button class="switch-btn" id="mot_de_passe_oublier">Mot de passe oublié</button>
+    </div>
 
-  <!-- Formulaire connexion -->
-  <form id="login-form" class="form active" action="verification.php" method="post"><!-- partie pour se connecter et envoie une requete au php -->
-    <h1>Connexion</h1>
-    <label>Nom d'utilisateur</label>
-    <input type="text" name="username" placeholder="username" required>
-    <br>
-    <label>Mot de passe</label>
-    <input type="password" name="password" placeholder="password" required>
-    <br>
-    <input type="submit" value="Se connecter">
-  </form>
+    <!-- Formulaire Connexion -->
+    <form id="login-form" class="form active" action="verification.php" method="post">
+        <h1>Connexion</h1>
+        <label>Nom d'utilisateur</label>
+        <input type="text" name="username" placeholder="username" required>
+        <br>
+        <label>Mot de passe</label>
+        <input type="password" name="password" placeholder="password" required>
+        <br>
+        <input type="submit" value="Se connecter">
+    </form>
 
-  <!-- Formulaire inscription -->
-  <form id="register-form" class="form" action="inscription.php" method="post">
-    <h1>Nouveau compte</h1>
-    <label>Nom d'utilisateur</label>
-    <input type="text" name="new_username" placeholder="username" required><!-- entrer du texte pour un pseudo avec place holder qui affiche un exemple -->
-    <br>
-    <label>Email</label>
-    <input type="email" name="new_email" placeholder="mail@example.com" required>
-    <br>
-    <label>Mot de passe</label>
-    <input type="password" name="new_password" placeholder="password" required>
-    <br>
-    <input type="submit" value="Créer le compte">
-  </form>
+    <!-- Formulaire Inscription -->
+    <form id="register-form" class="form" action="inscription.php" method="post">
+        <h1>Nouveau compte</h1>
+        <label>Nom d'utilisateur</label>
+        <input type="text" name="new_username" placeholder="username" required>
+        <br>
+        <label>Email</label>
+        <input type="email" name="new_email" placeholder="mail@example.com" required>
+        <br>
+        <label>Mot de passe</label>
+        <input type="password" name="new_password" placeholder="password" required>
+        <br>
+        <input type="submit" value="Créer le compte">
+    </form>
+
+    <!-- Formulaire Mot de passe oublié -->
+    <form id="forgot-form" class="form" action="mot_de_passe_oublier.php" method="post">
+        <h1>Mot de passe oublié</h1>
+        <label>Email</label>
+        <input type="email" name="forgot_email" placeholder="votre email" required>
+        <input type="submit" value="Envoyer le lien">
+    </form>
 </div>
+
     <script src="form.js"></script>
+    <script src="gestion_profil.js"></script>
     <script src="portfolio.js"></script><!-- <script> permet d'ajouter un fichier .js pour que le html l'utilise -->
     <script src="portfolio(part2).js"></script>
     <script src="colors_change.js"></script>

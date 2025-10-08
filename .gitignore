@@ -1,4 +1,6 @@
-# Fichier de variables sensibles
+# fichiers de configuration sensibles
 .env
-account.db
-bot1.py
+config.local.php
+/vendor/
+node_modules/
+.DS_Store
