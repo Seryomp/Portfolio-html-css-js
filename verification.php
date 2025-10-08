@@ -1,6 +1,6 @@
 <?php
 require 'config.php'; // Connexion PDO à la BDD
-session_start(); // On démarre la session pour stocker l'utilisateur
+session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'] ?? '';
@@ -21,6 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['username'] = $user['username'];
         $_SESSION['avatar'] = $user['avatar'] ?: 'default_avatar.png';
 
+        // Renvoi JSON pour AJAX
         echo json_encode([
             'success' => true,
             'username' => $_SESSION['username'],

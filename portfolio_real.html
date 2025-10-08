@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Réel</title>
+  <link rel="stylesheet" href="wake_up_to_reality.css">
+  <script src="https://kit.fontawesome.com/a2d04e1f09.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- BARRE LATÉRALE -->
+  <div class="barre-laterale" id="sidebar">
+    <div>
+      <div class="onglet">
+        <div class="profil">
+          <a href="https://discord.gg/e3MhVQ8sgA" target="_blank">
+            <img class="avatar" src="https://i.imgur.com/9b1r9C1.png" alt="avatar">
+          </a>
+        </div>
+        <div class="informations">
+          <strong>Ryo_Off</strong><br>
+          Développeur Web
+         </div>
+      </div>
+
+      <div class="menu-principal">
+        <div class="element-menu actif"><i class="fas fa-house"></i><span>Accueil</span></div>
+        <div class="element-menu"><i class="fas fa-chart-bar"></i><span>Présentation</span></div>
+        <div class="element-menu"><i class="fas fa-bell"></i><span>diplôme</span></div>
+        <div class="element-menu"><i class="fas fa-chart-line"></i><span>Connaissance</span></div>
+        <div class="element-menu"><i class="fas fa-heart"></i><span>éxperiences</span></div>
+        <div class="element-menu"><i class="fas fa-wallet"></i><span>Jeux</span></div>
+      </div>
+    </div>
+
+    <div class="bas">
+        <!-- BOUTON CHANGER LE FOND -->
+      <div class="element-menu" id="change-bg-btn">
+        <i class="fas fa-right-from-bracket"></i><span>changer le fond</span>
+      </div>
+
+      <div class="changer-theme">
+        <i class="fas fa-moon"></i><span>Mode Sombre</span>
+        <label class="interrupteur">
+          <input type="checkbox" id="theme-toggle">
+        </label>
+      </div>
+
+      <div class="reduire-barre">
+        <i class="fas fa-angles-left" id="collapse-icon"></i><span>Réduire</span>
+      </div>
+    </div>
+  </div>
+
+<div class="mini-game" id="guessCharacter" style="margin:20px auto; max-width:400px; padding:20px; border-radius:10px; background:#222; color:white;">
+  <h3>Guess Character</h3>
+
+  <!-- Choix anime -->
+  <input type="text" id="animeInput" placeholder="Tapez un anime..." list="animeSuggestions" style="width:100%; padding:5px;">
+  <datalist id="animeSuggestions"></datalist>
+
+  <!-- Mode devinette -->
+  <select id="modeSelect" style="width:100%; margin-top:5px; padding:5px;">
+    <option value="name">Nom du personnage</option>
+    <option value="role">Rôle / Type</option>
+    <option value="image">Deviner via l'image</option>
+  </select>
+
+  <!-- Difficulté (visible seulement si mode image) -->
+  <select id="difficultySelect" style="width:100%; margin-top:5px; padding:5px; display:none;">
+    <option value="simple">Simple (nette)</option>
+    <option value="moyen">Moyen (léger flou)</option>
+    <option value="difficile">Difficile (beaucoup flou)</option>
+  </select>
+
+  <button id="newRound" style="width:100%; margin-top:10px; padding:5px;">Nouvelle Partie</button>
+
+  <!-- Quiz -->
+  <div id="quiz" style="display:none; margin-top:15px;">
+    <h4 id="animeTitle"></h4>
+    <img id="charImage" src="" alt="Personnage" style="max-width:200px; display:block; margin:auto; filter: blur(0px);">
+    <div id="choices" style="margin-top:10px;"></div>
+    <p id="result"></p>
+  </div>
+</div>
+
+  <!-- CONTAINER POUR LES FONDS -->
+  <div id="background-container"></div>
+
+  <!-- SCRIPTS -->
+   <script src="autocomplete+quiz.js"></script>
+   <script src="section.js"></script>
+   <script src="guess_character.js"></script>
+   <script src="dialogue.js"></script>
+  <script src="matrix.js" defer></script>
+  <script src="sakura.js" defer></script>
+  <script src="SolarSysteme.js" defer></script>
+  <script src="backgrounds.js" defer></script>
+  <script src="sidebars.js" defer></script>
+  <script src="Portfolio.js" defer></script>
+
+</body>
+</html>

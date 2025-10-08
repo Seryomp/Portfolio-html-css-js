@@ -286,3 +286,27 @@ background: linear-gradient(213deg, rgba(13, 3, 3, 1) 0%, rgba(158, 27, 27, 1) 1
     display: block;
     margin: 0 auto;       /* centre si nécessaire */
 }
+
+.slash {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 200vh;
+  background: white;
+  opacity: 0.8;
+  transform-origin: center;
+  animation: slashAnim 0.5s ease-out forwards;
+  z-index: 9998;
+}
+
+@keyframes slashAnim {
+  from {
+    transform: scaleY(0) rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: scaleY(1.2) rotate(30deg);
+    opacity: 0;
+  }
+}

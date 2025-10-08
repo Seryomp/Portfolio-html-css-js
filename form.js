@@ -12,19 +12,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const connectionPopup = document.querySelector(".connection");
     const btnConnection = document.querySelector(".co"); // Bouton "Connexion" sur la page
 
-    // --- Gestion de l’ouverture de la popup ---
+    // --- Ouverture de la popup ---
     btnConnection.addEventListener("click", () => {
         connectionOverlay.style.display = "block";
         connectionPopup.style.display = "block";
     });
 
-    // --- Gestion de la fermeture de la popup ---
+    // --- Fermeture de la popup ---
     document.querySelector(".close-btn").addEventListener("click", () => {
         connectionOverlay.style.display = "none";
         connectionPopup.style.display = "none";
     });
 
-    // --- Changement d’onglets connexion / inscription / mot de passe oublié ---
+    // --- Changement d’onglets ---
     document.getElementById("login-tab").addEventListener("click", () => {
         loginForm.classList.add("active");
         registerForm.classList.remove("active");
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- Connexion via AJAX ---
     loginForm.addEventListener("submit", (e) => {
-        e.preventDefault(); // Empêche le rechargement de page
+        e.preventDefault(); // Empêche le rechargement
         const formData = new FormData(loginForm);
 
         fetch("verification.php", {
@@ -53,15 +53,13 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(res => res.json())
         .then(data => {
             if (data.success) {
-                // Masquer bouton connexion et popup
+                // Masquer la popup
                 btnConnection.style.display = "none";
                 connectionOverlay.style.display = "none";
                 connectionPopup.style.display = "none";
 
-                // Afficher profil
-                profileContainer.style.display = "flex";
-                profileUsername.textContent = data.username;
-                profileAvatar.src = `avatars/${data.avatar}`;
+                // Effet de slash après connexion
+                playSlashEffect();
             } else {
                 alert(data.message || "Erreur de connexion");
             }
@@ -100,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
     editAvatarBtn.addEventListener("click", () => {
         const fileInput = document.createElement("input");
         fileInput.type = "file";
-        fileInput.accept = "image/*"; // Seules images
+        fileInput.accept = "image/*";
         fileInput.click();
 
         fileInput.addEventListener("change", () => {
@@ -117,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(res => res.json())
             .then(data => {
                 if (data.success) {
-                    profileAvatar.src = `avatars/${data.avatar}?t=${new Date().getTime()}`; // Evite cache
+                    profileAvatar.src = `avatars/${data.avatar}?t=${new Date().getTime()}`;
                     alert("Avatar mis à jour !");
                 } else {
                     alert(data.message || "Erreur lors de la mise à jour de l’avatar");

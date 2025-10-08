@@ -123,10 +123,24 @@
     </form>
 </div>
 
+<!-- Conteneur vidéo -->
+<div id="introVideoContainer" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:10000; background:black;">
+    <video id="introVideo" width="100%" height="100%" autoplay>
+        <source src="malevolent_shrine_no_glow_jujutsu_kaisen.glb" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+    </video>
+</div>
+
+
+<!-- Audio pour les slashs -->
+<audio id="slashSound" src="455226__gamebalance__blade-02.wav"></audio>
+
     <script src="form.js"></script>
     <script src="gestion_profil.js"></script>
     <script src="portfolio.js"></script><!-- <script> permet d'ajouter un fichier .js pour que le html l'utilise -->
     <script src="portfolio(part2).js"></script>
     <script src="colors_change.js"></script>
+    <script src="slash.js"></script>
+    <script src="transition.js"></script>
 </body>
 </html>
