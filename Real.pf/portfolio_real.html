@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Réel</title>
+  <link rel="stylesheet" href="wake_up_to_reality.css">
+  <script src="https://kit.fontawesome.com/a2d04e1f09.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><!---charger la liste des fa [] pour le html-->
+</head>
+<body>
+
+  <!-- BARRE LATÉRALE -->
+  <div class="barre-laterale" id="sidebar">
+    <div>
+      <div class="onglet">
+        <div class="profil">
+          <a href="https://discord.gg/e3MhVQ8sgA" target="_blank">
+            <img class="avatar" src="" alt="avatar">
+          </a>
+        </div>
+        <div class="informations">
+          <strong>Ryo_Off</strong><br>
+          Développeur Web <br>
+           Âge : <span id="age"></span> ans
+         </div>
+      </div>
+              <!---liste de défilement-->
+              <!---fa-[] pour faire apparaitre les icônes-->
+              <!--les class menu pour le js-->
+      <div class="menu-principal">
+        <div class="element-menu actif"><i class="fas fa-house"></i><span>Accueil</span></div>
+        <div class="element-menu"><i class="fa-solid fa-display"></i><span>Présentation</span></div>
+        <div class="element-menu"><i class="fa-solid fa-graduation-cap"></i><span>diplôme</span></div>
+        <div class="element-menu"><i class="fa-solid fa-lightbulb"></i><span>Connaissance</span></div>
+        <div class="element-menu"><i class="fa-solid fa-history"></i><span>éxperiences</span></div>
+        <div class="element-menu"><i class="fa-solid fa-gamepad"></i><span>Jeux</span></div>
+        <div id="glitch" class="element-menu"><i class="fa-solid fa-triangle-exclamation"></i><span>error 404</span></div>
+        <div id="ultima" class="element-menu"><i class="fa-solid fa-user-slash"></i><span>Ultima ▉▉▉▉▉▉▉</span></div>
+      </div>
+    </div>
+                  <!--boutton youtube et discord-->
+                  <ul class="liste-boutons">
+                    <li>
+                      <a href="https://discord.gg/pqUEs8vBKu" target="_blank" class="bouton-3d discord coter-bouton">
+                        <i class="fa-brands fa-discord icone-bouton"></i>
+                        <span class="texte-bouton">Discord</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.youtube.com/@atchoum5683" target="_blank" class="bouton-3d youtube coter-bouton">
+                        <i class="fa-brands fa-youtube icone-bouton"></i>
+                        <span class="texte-bouton">YouTube</span>
+                      </a>
+                    </li>
+                  </ul>
+
+    <div class="bas">
+        <!--mode sombre-->
+      <div class="changer-theme">
+        <i class="fas fa-moon"></i><span>Mode Sombre</span>
+        <label class="interrupteur">
+          <input type="checkbox" id="theme-toggle">
+        </label>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CONTAINER POUR LES CONTENUS -->
+<main id="content-container">
+  <div class="onglet-contenu" id="accueil">
+    <p>
+    Tu arrives sur ce site et tu sens que quelque chose cloche…  </p> <br>
+   <p> Les pages semblent normales, mais ton instinct te dit que tout n'est pas ce qu'il paraît. <br>
+  </p> 
+  <p>
+    Les liens, les images, les textes… tous guidés vers une illusion subtile. </p> <br>
+  <p>▉▉▉▉▉▉▉▉… quelque chose observe chacun de tes clics.
+  </p>
+  <p>
+    Ta curiosité est ton guide. Ton exploration commence ici.   <br>
+    Es-tu prêt à découvrir ce qui se cache derrière le voile ?
+  </p>
+    <p class="bienvenue">|</p>
+    <p class="bienvenue">V</p>
+    <button class="button_1">entrer dans mon monde</button>
+    <p id="after">^</p>
+    <p id="after">|</p>
+    <p id="after">Clique ici pour plus d'info</p>
+    <!---utilisationde script js-->
+  </div>
+  <div class="onglet-contenu" id="presentation" style="display:none;">
+    <p>Voici une présentation brève de moi et de cette page </p>
+    <p>moi je me nomme [] ,j'ai 17 ans et je suis en étude de dévellopement web </p> <br>
+     <p> 
+    Tu as percé l'illusion… et soudain, le vrai site apparaît.  
+    Le Site que tu croyais explorer n'était qu'un échafaudage fragile.
+  </p>
+  <p> <br>
+    Un individu mystérieux t'accueille :  
+    “Tu as percé l'illusion… comme je l'avais prévu. ▉▉▉▉▉▉▉”
+  </p>
+  <p> <br>
+    Ici commence ta véritable exploration. Le site n'est plus un simple site web,  
+    mais un labyrinthe d'informations, de secrets et d'histoires que seuls les curieux peuvent déchiffrer.
+  </p>
+  <p> <br>
+    Observe chaque détail. Chaque glitch pourrait être un message. ▉▉▉▉▉▉▉▉  
+    Tout a sa raison d'être.
+  </p>
+  </div>
+  <div class="onglet-contenu" id="diplome" style="display:none;">
+    <p>Mes diplômes sont listés ici:</p> <br>
+    <li><strong>-BAC SN(Système Numerique)</strong></li>
+  </div>
+  <div class="onglet-contenu" id="connaissance" style="display:none;">
+    <p>Mes connaissances en développement web.</p>
+  </div>
+  <div class="onglet-contenu" id="experiences" style="display:none;">
+    <p></p>
+  </div>
+  <div class="onglet-contenu" id="jeux" style="display:none;">
+    <p>voici quelque "jeux" à disposition</p>
+  </div>
+  <div class="onglet-contenu" id="glitch-tab" style="display:none;">
+    <!---utilisation de script js-->>
+  </div>
+  <div class="onglet-contenu" id="ultima-tab" style="display:none;">
+    <p>Ultima ▉▉▉▉▉▉▉ contenu secret.</p>
+    <!---utilisation de script js-->
+  </div>
+</main>
+  
+  <!-- CONTAINER POUR LES FONDS -->
+  <div id="background-container"></div>
+
+  <!-- SCRIPTS -->
+   <script src="âge.js"></script>
+  <script src="glitch.js"></script>
+  <script src="sidebars.js"></script>
+  <script src="Portfolio.js"></script>
+
+</body>
+</html>

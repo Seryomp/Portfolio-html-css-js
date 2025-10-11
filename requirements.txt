@@ -1,8 +1,0 @@
-discord.py>=2.3.0
-Flask>=2.0
-flask-cors
-python-dotenv
-flask-socketio>=5.0
-python-socketio
-python-engineio
-eventlet

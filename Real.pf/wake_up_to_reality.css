@@ -1,0 +1,295 @@
+/* ===================== RESET ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: monospace;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ===================== BODY ===================== */
+body {
+  background: #f5f5f5;
+  transition: background 0.3s;
+}
+
+/* ===================== SIDEBAR ===================== */
+.barre-laterale {
+  width: 260px;
+  height: 100vh;
+  background-color: #ffffff;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: width 0.3s, background 0.3s;
+  z-index: 100;
+}
+
+.barre-laterale.sombre {
+  background: #1e1e1e;
+  color: white;
+}
+
+.barre-laterale.reduite {
+  width: 80px;
+}
+
+.onglet {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.profil img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.informations {
+  margin-left: 10px;
+}
+
+.menu-principal, .bas {
+  display: flex;
+  flex-direction: column;
+}
+
+.element-menu {
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 16px;
+}
+
+.element-menu i {
+  font-size: 18px;
+  width: 22px;
+  text-align: center;
+}
+
+.element-menu:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.barre-laterale.sombre .element-menu:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.element-menu.actif {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.barre-laterale.sombre .element-menu.actif {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.bas {
+  padding-bottom: 10px;
+}
+
+.changer-theme{
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.interrupteur input {
+  cursor: pointer;
+}
+
+/* ===================== BACKGROUND ===================== */
+#background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: -1;
+}
+
+.liste-boutons {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Structure principale */
+.bouton-3d {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 260px;
+  height: 80px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px; /* espace entre les lettres*/
+  transform: rotate(-10deg) skew(10deg); /* change la rotation */
+  transition: all 0.3s ease; /* transition pour animation */
+  box-shadow: -8px 8px 10px rgba(0,0,0,0.5); /*ombre du boutton*/
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+/* Icône */
+.icone-bouton {
+  position: relative;
+  font-size: 40px;
+  margin-left: 25px;
+  transition: color 0.3s;
+}
+
+/* Texte */
+.texte-bouton {
+  position: relative;
+  font-size: 18px;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+
+/* Discord */
+.discord {
+  background: #5865f2;
+}
+
+.discord.coter-bouton::before,.discord.coter-bouton::after {
+  background: #4a58d4;
+}
+
+/* YouTube */
+.youtube {
+  background: #ff0000;
+}
+
+.youtube.coter-bouton::before,.youtube.coter-bouton::after {
+  background: #cc0000;
+}
+
+/* boutton 3D */
+.bouton-3d:hover {
+  transform: rotate(-10deg) skew(10deg) translate(15px, -10px);
+  box-shadow: -25px 25px 30px rgba(0,0,0,0.7);
+}
+
+.bouton-3d:hover .icone-bouton,.bouton-3d:hover .texte-bouton {
+  color: #111;
+}
+
+.bouton-3d:hover::before,.bouton-3d:hover::after {
+  filter: brightness(1.2);
+}
+
+.icone-bouton {
+  font-size: 32px;
+  margin-left: 25px;
+  transition: color 0.3s;
+}
+
+/*onglet glitch*/
+#glitch {
+  color: #9b0909;
+}
+
+/* ====== Dialogue ====== */
+.dialogue-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 200;
+}
+
+.dialogue-box {
+    padding: 20px 30px;
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    font-family: monospace;
+    font-size: 18px;
+    border: 2px solid #9b0909; /* contour pour effet glitch */
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    animation: flicker 0.1s infinite alternate;
+}
+
+/* Petit effet de scintillement pour l’ambiance glitch */
+@keyframes flicker {
+    from { opacity: 1; }
+    to { opacity: 0.85; }
+}
+
+/* Image du personnage au-dessus de la boîte */
+.dialogue-container img {
+    width: 100px;
+    margin-bottom: 10px;
+    border: 2px solid #9b0909;
+    border-radius: 8px;
+    animation: flicker 0.1s infinite alternate;
+}
+
+/* ====== Canvas du mini-jeu ====== */
+.game-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 150;
+    background: black;
+}
+
+.onglet-contenu {
+    margin-left: 250px; /* largeur de ta sidebar */
+    padding: 20px;
+    color: #fff; /* si tu veux du texte visible sur fond sombre */
+}
+
+#accueil{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  font-size: 32px;
+  color: white;
+}
+
+.button_1{
+  padding: 10px 20px;
+}
+#presentation,#connaissance,#eperiences,#glitch-tab,#ultima-tab{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+
+  font-size: 24px;
+  color: white;
+}
+
+#diplome{
+  display: flex;
+  flex-direction: column;
+
+
+  font-size: 24px;
+  color: white;
+}
