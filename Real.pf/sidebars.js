@@ -1,4 +1,4 @@
-// ----------------- Fond Matrix -----------------
+// ----------------- Fond Matrix principal -----------------
 const container = document.getElementById('background-container');
 
 function matrixBackground(container) {
@@ -30,39 +30,12 @@ function matrixBackground(container) {
     return {canvas, interval};
 }
 
-// Initialisation du fond Matrix
 const activeMatrix = matrixBackground(container);
 
-// Redimensionnement du canvas
 window.addEventListener('resize', () => {
-    if(activeMatrix.canvas){
+    if (activeMatrix.canvas) {
         activeMatrix.canvas.width = container.clientWidth;
         activeMatrix.canvas.height = container.clientHeight;
-    }
-});
-
-// ----------------- Mode sombre -----------------
-const themeToggle = document.getElementById('theme-toggle');
-const sidebar = document.querySelector('.barre-laterale');
-
-function applyTheme(isDark) {
-    if (isDark) sidebar.classList.add('sombre');
-    else sidebar.classList.remove('sombre');
-}
-
-themeToggle.addEventListener('change', () => {
-    applyTheme(themeToggle.checked);
-    localStorage.setItem('darkTheme', themeToggle.checked);
-});
-
-window.addEventListener('load', () => {
-    const storedTheme = localStorage.getItem('darkTheme');
-    if(storedTheme !== null){
-        const isDark = storedTheme === 'true';
-        themeToggle.checked = isDark;
-        applyTheme(isDark);
-    } else {
-        applyTheme(themeToggle.checked);
     }
 });
 
@@ -72,17 +45,14 @@ const sections = document.querySelectorAll('.onglet-contenu');
 
 menuElements.forEach(el => {
     el.addEventListener('click', () => {
-        // Retirer la classe actif de tous les onglets
         menuElements.forEach(e => e.classList.remove('actif'));
         el.classList.add('actif');
 
-        // Masquer toutes les sections
         sections.forEach(sec => sec.style.display = 'none');
 
-        // Afficher la section correspondant à l'onglet
         const text = el.innerText.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
-        switch(text){
+        switch (text) {
             case 'accueil': document.getElementById('accueil').style.display = 'block'; break;
             case 'presentation': document.getElementById('presentation').style.display = 'block'; break;
             case 'diplome': document.getElementById('diplome').style.display = 'block'; break;

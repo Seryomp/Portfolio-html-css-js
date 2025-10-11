@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><!---charger la liste des fa [] pour le html-->
 </head>
 <body>
-
   <!-- BARRE LATÉRALE -->
   <div class="barre-laterale" id="sidebar">
     <div>
@@ -20,7 +19,7 @@
           </a>
         </div>
         <div class="informations">
-          <strong>Ryo_Off</strong><br>
+          <strong>[]</strong><br>
           Développeur Web <br>
            Âge : <span id="age"></span> ans
          </div>
@@ -39,32 +38,22 @@
         <div id="ultima" class="element-menu"><i class="fa-solid fa-user-slash"></i><span>Ultima ▉▉▉▉▉▉▉</span></div>
       </div>
     </div>
-                  <!--boutton youtube et discord-->
-                  <ul class="liste-boutons">
-                    <li>
-                      <a href="https://discord.gg/pqUEs8vBKu" target="_blank" class="bouton-3d discord coter-bouton">
-                        <i class="fa-brands fa-discord icone-bouton"></i>
-                        <span class="texte-bouton">Discord</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.youtube.com/@atchoum5683" target="_blank" class="bouton-3d youtube coter-bouton">
-                        <i class="fa-brands fa-youtube icone-bouton"></i>
-                        <span class="texte-bouton">YouTube</span>
-                      </a>
-                    </li>
-                  </ul>
+             <!--boutton youtube et discord-->
+             <ul class="liste-boutons">
+                <li>
+                  <a href="https://discord.gg/pqUEs8vBKu" target="_blank" class="bouton-3d discord coter-bouton">
+                    <i class="fa-brands fa-discord icone-bouton"></i>
+                   <span class="texte-bouton">Discord</span>
+                  </a>
+               </li>
+                <li>
+                    <a href="https://www.youtube.com/@atchoum5683" target="_blank" class="bouton-3d youtube coter-bouton">
+                     <i class="fa-brands fa-youtube icone-bouton"></i>
+                      <span class="texte-bouton">YouTube</span>
+                    </a>
+                </li>
+              </ul>
 
-    <div class="bas">
-        <!--mode sombre-->
-      <div class="changer-theme">
-        <i class="fas fa-moon"></i><span>Mode Sombre</span>
-        <label class="interrupteur">
-          <input type="checkbox" id="theme-toggle">
-        </label>
-      </div>
-
-    </div>
   </div>
 
   <!-- CONTAINER POUR LES CONTENUS -->
@@ -127,16 +116,18 @@
     <!---utilisation de script js-->>
   </div>
   <div class="onglet-contenu" id="ultima-tab" style="display:none;">
-    <p>Ultima ▉▉▉▉▉▉▉ contenu secret.</p>
-    <!---utilisation de script js-->
-  </div>
+<div id="console"></div>
+  <input type="text" id="input-field" placeholder="Tapez 'start'" style="display:none;margin-top:10px;background:#000;color:#0f0;border:1px solid #0f0;padding:4px;">
+</div>
+
 </main>
   
   <!-- CONTAINER POUR LES FONDS -->
   <div id="background-container"></div>
 
   <!-- SCRIPTS -->
-   <script src="âge.js"></script>
+  <script src="ultima.js"></script>
+  <script src="âge.js"></script>
   <script src="glitch.js"></script>
   <script src="sidebars.js"></script>
   <script src="Portfolio.js"></script>
