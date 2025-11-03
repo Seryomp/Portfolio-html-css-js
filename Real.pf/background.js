@@ -4,8 +4,6 @@ let currentIndex = 0;
 
 const backgrounds = [
     matrixBackground,
-    sakuraBackground,
-    solarSystemBackground
 ];
 
 function changeBackground() {

@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <meta http-equiv="Content-Security-Policy" 
+      content="default-src 'self'; 
+               img-src 'self' http://localhost:3000; 
+               script-src 'self' http://localhost:3000; 
+               style-src 'self' http://localhost:3000">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Réel</title>
@@ -79,6 +84,9 @@
     <p id="after">Clique ici pour plus d'info</p>
     <!---utilisationde script js-->
   </div>
+
+
+  
   <div class="onglet-contenu" id="presentation" style="display:none;">
     <p>Voici une présentation brève de moi et de cette page </p>
     <p>moi je me nomme [] ,j'ai 17 ans et je suis en étude de dévellopement web </p> <br>
@@ -99,18 +107,46 @@
     Tout a sa raison d'être.
   </p>
   </div>
+
+
+
   <div class="onglet-contenu" id="diplome" style="display:none;">
     <p>Mes diplômes sont listés ici:</p> <br>
     <li><strong>-BAC SN(Système Numerique)</strong></li>
   </div>
+
+
+
   <div class="onglet-contenu" id="connaissance" style="display:none;">
     <p>Mes connaissances en développement web.</p>
   </div>
+
+
   <div class="onglet-contenu" id="experiences" style="display:none;">
     <p></p>
   </div>
+
+
+
   <div class="onglet-contenu" id="jeux" style="display:none;">
-    <p>voici quelque "jeux" à disposition</p>
+    <p>voici un jeux à disposition</p>
+    <button id="discordLogin">Se connecter avec Discord</button>
+
+
+<!-- Affichage Discord -->
+<div id="discord-user" class="discord-user">
+    <img id="discord-avatar" class="discord-avatar" src="" alt="avatar">
+    <span id="discord-username" class="discord-username"></span>
+    <button id="discord-login" class="discord-login">Se connecter</button>
+</div>
+
+<!-- Onglet Donjon -->
+<div class="onglet-contenu" id="jeux">
+    <h2>Donjon</h2>
+    <button id="launchBtn">Lancer Donjon</button>
+    <div id="result"></div>
+</div>
+
   </div>
   <div class="onglet-contenu" id="glitch-tab" style="display:none;">
     <!---utilisation de script js-->>
@@ -126,6 +162,7 @@
   <div id="background-container"></div>
 
   <!-- SCRIPTS -->
+  <script src="donjon.js"></script>
   <script src="ultima.js"></script>
   <script src="âge.js"></script>
   <script src="glitch.js"></script>
