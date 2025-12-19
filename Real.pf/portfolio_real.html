@@ -1,173 +1,78 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Security-Policy" 
-      content="default-src 'self'; 
-               img-src 'self' http://localhost:3000; 
-               script-src 'self' http://localhost:3000; 
-               style-src 'self' http://localhost:3000">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Réel</title>
   <link rel="stylesheet" href="wake_up_to_reality.css">
-  <script src="https://kit.fontawesome.com/a2d04e1f09.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><!---charger la liste des fa [] pour le html-->
+  <title>PF</title>
 </head>
-<body>
-  <!-- BARRE LATÉRALE -->
-  <div class="barre-laterale" id="sidebar">
-    <div>
-      <div class="onglet">
-        <div class="profil">
-          <a href="https://discord.gg/e3MhVQ8sgA" target="_blank">
-            <img class="avatar" src="" alt="avatar">
-          </a>
-        </div>
-        <div class="informations">
-          <strong>[]</strong><br>
-          Développeur Web <br>
-           Âge : <span id="age"></span> ans
-         </div>
-      </div>
-              <!---liste de défilement-->
-              <!---fa-[] pour faire apparaitre les icônes-->
-              <!--les class menu pour le js-->
-      <div class="menu-principal">
-        <div class="element-menu actif"><i class="fas fa-house"></i><span>Accueil</span></div>
-        <div class="element-menu"><i class="fa-solid fa-display"></i><span>Présentation</span></div>
-        <div class="element-menu"><i class="fa-solid fa-graduation-cap"></i><span>diplôme</span></div>
-        <div class="element-menu"><i class="fa-solid fa-lightbulb"></i><span>Connaissance</span></div>
-        <div class="element-menu"><i class="fa-solid fa-history"></i><span>éxperiences</span></div>
-        <div class="element-menu"><i class="fa-solid fa-gamepad"></i><span>Jeux</span></div>
-        <div id="glitch" class="element-menu"><i class="fa-solid fa-triangle-exclamation"></i><span>error 404</span></div>
-        <div id="ultima" class="element-menu"><i class="fa-solid fa-user-slash"></i><span>Ultima ▉▉▉▉▉▉▉</span></div>
-      </div>
+  <body>
+<div id="all">
+  <!-- Sidebar gauche -->
+  <div class="sidebar_gauche">
+    <div class="avatar">
+
+  <!-- Image de fond -->
+  <img class="C_img" src="deco1.png" alt="Fond">
+
+  <!-- avatar au-dessus -->
+  <img id="pfp" width="128" src="avatar_default.png" alt="Avatar">
+</div>
+
+    <div id="categorie">
+      <div class="C1" data-target="home">Accueil</div>
+      <div class="C1" data-target="presentation">Présentation</div>
+      <div class="C1" data-target="mystery">???</div>
+      <div class="C1" data-target="jeu">Jeu</div>
+      <div class="C1" data-target="admin">Admin Panel</div>
     </div>
-             <!--boutton youtube et discord-->
-             <ul class="liste-boutons">
-                <li>
-                  <a href="https://discord.gg/pqUEs8vBKu" target="_blank" class="bouton-3d discord coter-bouton">
-                    <i class="fa-brands fa-discord icone-bouton"></i>
-                   <span class="texte-bouton">Discord</span>
-                  </a>
-               </li>
-                <li>
-                    <a href="https://www.youtube.com/@atchoum5683" target="_blank" class="bouton-3d youtube coter-bouton">
-                     <i class="fa-brands fa-youtube icone-bouton"></i>
-                      <span class="texte-bouton">YouTube</span>
-                    </a>
-                </li>
-              </ul>
-
   </div>
 
-  <!-- CONTAINER POUR LES CONTENUS -->
-<main id="content-container">
-  <div class="onglet-contenu" id="accueil">
-    <p>
-    Tu arrives sur ce site et tu sens que quelque chose cloche…  </p> <br>
-   <p> Les pages semblent normales, mais ton instinct te dit que tout n'est pas ce qu'il paraît. <br>
-  </p> 
-  <p>
-    Les liens, les images, les textes… tous guidés vers une illusion subtile. </p> <br>
-  <p>▉▉▉▉▉▉▉▉… quelque chose observe chacun de tes clics.
-  </p>
-  <p>
-    Ta curiosité est ton guide. Ton exploration commence ici.   <br>
-    Es-tu prêt à découvrir ce qui se cache derrière le voile ?
-  </p>
-    <p class="bienvenue">|</p>
-    <p class="bienvenue">V</p>
-    <button class="button_1">entrer dans mon monde</button>
-    <p id="after">^</p>
-    <p id="after">|</p>
-    <p id="after">Clique ici pour plus d'info</p>
-    <!---utilisationde script js-->
+  <!-- Contenu central -->
+  <div id="content">
+    <div id="home" class="content-section">Bienvenue sur l'accueil !</div>
+    <div id="presentation" class="content-section" style="display:none;">Voici la présentation.</div>
+    <div id="mystery" class="content-section" style="display:none;">Bouton mystère !</div>
+    <div id="jeu" class="content-section" style="display:none;">Ici commence le jeu.</div>
+    <div id="admin" class="content-section" style="display:none;">Panel administrateur.</div>
   </div>
 
+  <!-- Sidebar droite -->
+  <div class="sidebar_droite">
+    <div class="avatar_2">
 
-  
-  <div class="onglet-contenu" id="presentation" style="display:none;">
-    <p>Voici une présentation brève de moi et de cette page </p>
-    <p>moi je me nomme [] ,j'ai 17 ans et je suis en étude de dévellopement web </p> <br>
-     <p> 
-    Tu as percé l'illusion… et soudain, le vrai site apparaît.  
-    Le Site que tu croyais explorer n'était qu'un échafaudage fragile.
-  </p>
-  <p> <br>
-    Un individu mystérieux t'accueille :  
-    “Tu as percé l'illusion… comme je l'avais prévu. ▉▉▉▉▉▉▉”
-  </p>
-  <p> <br>
-    Ici commence ta véritable exploration. Le site n'est plus un simple site web,  
-    mais un labyrinthe d'informations, de secrets et d'histoires que seuls les curieux peuvent déchiffrer.
-  </p>
-  <p> <br>
-    Observe chaque détail. Chaque glitch pourrait être un message. ▉▉▉▉▉▉▉▉  
-    Tout a sa raison d'être.
-  </p>
+      <!---cadre de la personne qui se connecte-->
+      <img class="C_2" src="Deco2.png" alt="">
+
+      <!----avatar de la personne qui se connecte-->
+      <img id="pfp_U" width="128" src="avatar_default.png">
+    </div>
+
+    <div id="user_info">
+      <h3 id="username">Utilisateur</h3>
+      <p id="user_status">Connectez-vous pour voir les informations.</p>
+    </div>
+    <button id="connexion_button">Se connecter</button>
   </div>
-
-
-
-  <div class="onglet-contenu" id="diplome" style="display:none;">
-    <p>Mes diplômes sont listés ici:</p> <br>
-    <li><strong>-BAC SN(Système Numerique)</strong></li>
-  </div>
-
-
-
-  <div class="onglet-contenu" id="connaissance" style="display:none;">
-    <p>Mes connaissances en développement web.</p>
-  </div>
-
-
-  <div class="onglet-contenu" id="experiences" style="display:none;">
-    <p></p>
-  </div>
-
-
-
-  <div class="onglet-contenu" id="jeux" style="display:none;">
-    <p>voici un jeux à disposition</p>
-    <button id="discordLogin">Se connecter avec Discord</button>
-
-
-<!-- Affichage Discord -->
-<div id="discord-user" class="discord-user">
-    <img id="discord-avatar" class="discord-avatar" src="" alt="avatar">
-    <span id="discord-username" class="discord-username"></span>
-    <button id="discord-login" class="discord-login">Se connecter</button>
 </div>
 
-<!-- Onglet Donjon -->
-<div class="onglet-contenu" id="jeux">
-    <h2>Donjon</h2>
-    <button id="launchBtn">Lancer Donjon</button>
-    <div id="result"></div>
+<!-- Popup connexion -->
+<div id="login_popup" class="modl">
+  <div class="modal-content">
+    <a href="#" id="close">X</a>
+    <h2>Connexion</h2>
+    <div id="email_login">
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Mot de passe" required>
+      <button id="login">Se connecter</button>
+      <button id="register">Créer un compte</button>
+
+    </div>
+  </div>
 </div>
 
-  </div>
-  <div class="onglet-contenu" id="glitch-tab" style="display:none;">
-    <!---utilisation de script js-->>
-  </div>
-  <div class="onglet-contenu" id="ultima-tab" style="display:none;">
-<div id="console"></div>
-  <input type="text" id="input-field" placeholder="Tapez 'start'" style="display:none;margin-top:10px;background:#000;color:#0f0;border:1px solid #0f0;padding:4px;">
-</div>
-
-</main>
-  
-  <!-- CONTAINER POUR LES FONDS -->
-  <div id="background-container"></div>
-
-  <!-- SCRIPTS -->
-  <script src="donjon.js"></script>
-  <script src="ultima.js"></script>
-  <script src="âge.js"></script>
-  <script src="glitch.js"></script>
-  <script src="sidebars.js"></script>
-  <script src="Portfolio.js"></script>
-
+<script src="lanyard_api.js"></script>
+<script src="connexion.js"></script>
+<script src="sidebars.js"></script>
 </body>
 </html>

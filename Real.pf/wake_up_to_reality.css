@@ -1,280 +1,221 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-html, body {
-  height: 100%;
-  font-family: monospace;
-  overflow: hidden;
-  position: relative;
+body {
+    background: #0f0f18;
+    color: #f0f0f5;
+    line-height: 1.6;
 }
 
-/*ultima*/
-@keyframes blink {
-  0%, 49% { opacity: 1; }
-  50%, 100% { opacity: 0; }
-}
-.blink {
-  animation: blink 1s step-start infinite;
+/* === Conteneur global === */
+#all {
+    display: flex;
+    min-height: 100vh;
 }
 
-/* ===================== SIDEBAR ===================== */
-.barre-laterale {
-  width: 260px;
-  height: 100vh;
-  background-color: #111;
-  color: white;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 100;
-}
-
-.onglet {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-}
-
-.profil img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
-.informations {
-  margin-left: 10px;
-}
-
-.menu-principal, .bas {
-  display: flex;
-  flex-direction: column;
-}
-
-.element-menu {
-  padding: 14px 20px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  cursor: pointer;
-  transition: background 0.3s;
-  font-size: 16px;
-}
-
-.element-menu i {
-  font-size: 18px;
-  width: 22px;
-  text-align: center;
-}
-
-.element-menu:hover {
-  background: rgba(0, 0, 0, 0.05);
-}
-
-.element-menu:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.element-menu.actif {
-  background: rgba(0, 0, 0, 0.1);
-}
-
-.element-menu.actif {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.bas {
-  padding-bottom: 10px;
-}
-
-.interrupteur input {
-  cursor: pointer;
-}
-
-/* ===================== BACKGROUND ===================== */
-#background-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: black;
-  z-index: -1;
-}
-
-.liste-boutons {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  padding: 0;
-  margin: 0;
-}
-
-/* Structure principale */
-.bouton-3d {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 260px;
-  height: 80px;
-  color: white;
-  font-weight: bold;
-  letter-spacing: 2px; /* espace entre les lettres*/
-  transform: rotate(-10deg) skew(10deg); /* change la rotation */
-  transition: all 0.3s ease; /* transition pour animation */
-  box-shadow: -8px 8px 10px rgba(0,0,0,0.5); /*ombre du boutton*/
-  overflow: hidden;
-  border-radius: 6px;
-}
-
-/* Icône */
-.icone-bouton {
-  position: relative;
-  font-size: 40px;
-  margin-left: 25px;
-  transition: color 0.3s;
-}
-
-/* Texte */
-.texte-bouton {
-  position: relative;
-  font-size: 18px;
-  margin-left: 20px;
-  transition: color 0.3s;
-}
-
-/* Discord */
-.discord {
-  background: #5865f2;
-}
-
-.discord.coter-bouton::before,.discord.coter-bouton::after {
-  background: #4a58d4;
-}
-
-/* YouTube */
-.youtube {
-  background: #ff0000;
-}
-
-.youtube.coter-bouton::before,.youtube.coter-bouton::after {
-  background: #cc0000;
-}
-
-/* boutton 3D */
-.bouton-3d:hover {
-  transform: rotate(-10deg) skew(10deg) translate(15px, -10px);
-  box-shadow: -25px 25px 30px rgba(0,0,0,0.7);
-}
-
-.bouton-3d:hover .icone-bouton,.bouton-3d:hover .texte-bouton {
-  color: #111;
-}
-
-.bouton-3d:hover::before,.bouton-3d:hover::after {
-  filter: brightness(1.2);
-}
-
-.icone-bouton {
-  font-size: 32px;
-  margin-left: 25px;
-  transition: color 0.3s;
-}
-
-/*onglet glitch*/
-#glitch {
-  color: #9b0909;
-}
-
-/* ====== Dialogue ====== */
-.dialogue-container {
+/* === Sidebar gauche === */
+.sidebar_gauche {
+    flex: 0 0 200px; /* largeur fixe mais non extensible */
+    background: rgba(15,15,24,0.85);
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 200;
 }
 
-.dialogue-box {
-    padding: 20px 30px;
-    background: rgba(0, 0, 0, 0.85);
-    color: #fff;
-    font-family: monospace;
-    font-size: 18px;
-    border: 2px solid #9b0909; /* contour pour effet glitch */
-    border-radius: 8px;
-    text-align: center;
+.sidebar_gauche .avatar {
+    margin-bottom: 30px;
+}
+
+/* === Onglets === */
+#categorie {
+    width: 100%;
+}
+
+.C1 {
+    width: 100%;
+    padding: 15px 0;
+    margin: 8px 0;
+    border-radius: 10px;
     cursor: pointer;
-    animation: flicker 0.1s infinite alternate;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    background: rgba(15,15,24,0.85);
+    color: #f0f0f5;
+    transition: 0.3s;
+    border: 2px solid rgba(15,15,24,0.85);
 }
 
-/* Petit effet de scintillement pour l’ambiance glitch */
-@keyframes flicker {
-    from { opacity: 1; }
-    to { opacity: 0.85; }
+.C1:hover {
+    background: linear-gradient(90deg, #ff49f0, #6f00ff);
+    color: #fff;
+    border: 2px solid #ff49f0;
 }
 
-/* Image du personnage au-dessus de la boîte */
-.dialogue-container img {
-    width: 100px;
-    margin-bottom: 10px;
-    border: 2px solid #9b0909;
-    border-radius: 8px;
-    animation: flicker 0.1s infinite alternate;
+.C1.active {
+    background: linear-gradient(90deg, #ff49f0, #6f00ff);
+    color: #fff;
+    border: 2px solid #ff49f0;
+    box-shadow: 0 0 15px #ff49f0, 0 0 30px #6f00ff;
 }
 
-/* ====== Canvas du mini-jeu ====== */
-.game-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 150;
-    background: black;
+/* === Contenu central === */
+#content {
+    flex-grow: 1; /* prend tout l'espace restant */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0; /* pour éviter le débordement sur mobile */
 }
 
-.onglet-contenu {
-    margin-left: 250px; /* largeur de ta sidebar */
+.content-section {
+    display: none;
     padding: 20px;
-    color: #fff; /* si tu veux du texte visible sur fond sombre */
+    background: rgba(20,20,35,0.85);
+    border-radius: 15px;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    transition: opacity 0.3s;
 }
 
-#accueil{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  font-size: 32px;
-  color: white;
+.content-section.active {
+    display: block;
 }
 
-.button_1{
-  padding: 10px 20px;
-}
-#presentation,#connaissance,#eperiences,#glitch-tab,#ultima-tab{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-
-  font-size: 24px;
-  color: white;
+/* === Sidebar droite === */
+.sidebar_droite {
+    flex: 0 0 250px;
+    background: rgba(15,15,24,0.85);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#diplome{
-  display: flex;
-  flex-direction: column;
+.avatar_2 {
+    margin-bottom: 20px;
+}
 
+#user_info {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-  font-size: 24px;
-  color: white;
+#connexion_button {
+    background: linear-gradient(90deg, #ff49f0, #6f00ff);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+#connexion_button:hover {
+    filter: brightness(1.2);
+    box-shadow: 0 0 15px #ff49f0, 0 0 30px #6f00ff;
+}
+
+/* === Popup connexion === */
+.modl {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15,15,24,0.85);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: rgba(20,20,35,0.95);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 300px;
+}
+
+.modal-content #close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #ff49f0;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* === Formulaire === */
+#email_login input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+#email_login button {
+    width: 48%;
+    padding: 10px;
+    margin: 5px 1%;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(90deg, #ff49f0, #6f00ff);
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+#email_login button:hover {
+    filter: brightness(1.2);
+}
+
+/* === Responsive === */
+@media(max-width: 1024px) {
+    #all {
+        flex-direction: column;
+        align-items: center;
+    }
+    .sidebar_gauche, .sidebar_droite {
+        width: 90%;
+        flex: none;
+        margin-bottom: 20px;
+    }
+    #content {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+@media(max-width: 480px) {
+    .C1 {
+        font-size: 1rem;
+        padding: 12px 0;
+    }
+}
+
+#pfp{
+    border-radius: 50%;
+}
+
+.C_img{
+
+}
+
+.C_2{
+
 }
