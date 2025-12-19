@@ -1,7 +1,8 @@
-/backend
+/backend/routes
+/backend/cpp_code/.vscode/
 /backend/cpp_module/node_modules
 /backend/node_modules
-/backend/cpp_module/binding.gyp
+/backend/binding.gyp
 /backend/cpp_module/package-lock.json
 /backend/cpp_module/package.json
 /.vscode
